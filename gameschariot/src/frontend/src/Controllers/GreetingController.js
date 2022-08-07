@@ -1,8 +1,9 @@
-import axios from 'axios';
+import axios from "axios";
 import {useState, useEffect } from "react";
 
 function Greeting() {
     const [ getGreeting, setGreeting ] = useState("");
+    //const [ getGamesList, setGamesList ] = useState([]);
 
     useEffect(() => {
         const url = "http://localhost:8080"
@@ -17,10 +18,6 @@ function Greeting() {
 
         defaultGreeting();
     }, []);
-
-
-
-
 
     return(
         <>
