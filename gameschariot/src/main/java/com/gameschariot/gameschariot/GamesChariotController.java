@@ -21,7 +21,7 @@ public class GamesChariotController {
     private final AtomicLong counter = new AtomicLong();
 
     @GetMapping("/")
-    public Greeting gamesList() throws IOException {
+    public GamesChariot gamesList() throws IOException {
         // scraper
         Document doc = Jsoup.connect("https://help.netflix.com/en/node/121442").get();
         Elements listOfGames = doc.select(".c-wrapper div li a");
@@ -35,6 +35,6 @@ public class GamesChariotController {
         gameTitles.remove(0);
         gameTitles.remove(0);
         gameTitles.remove(gameTitles.size()-1);
-        return new Greeting(counter.incrementAndGet(), gameTitles.toString());
+        return new GamesChariot(counter.incrementAndGet(), gameTitles.toString());
     }
 }
