@@ -20,7 +20,7 @@ public class GamesChariotConfigController {
 
     @GetMapping
     public Map<String, String> displayConfigProperties() {
-        Map<String, String> prettyJson = new HashMap<>();
+
         return Map.of(
                 "apiUrl", gamesChariotConfig.apiUrl(),
                 "databaseServer", gamesChariotConfig.databaseServer(),
