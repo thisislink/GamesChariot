@@ -2,26 +2,25 @@ import axios from "axios";
 import {useState, useEffect } from "react";
 
 function Greeting() {
-    const [ getGreeting, setGreeting ] = useState("");
-    //const [ getGamesList, setGamesList ] = useState([]);
+    const [ getGamesList, setGamesList ] = useState([]);
 
     useEffect(() => {
         const url = "http://localhost:8080"
 
-        const defaultGreeting = () => {
+        const gamesList = () => {
             axios.get(url)
                 .then( response => {
-                    setGreeting(response.data.content);
+                    setGamesList(response.data.content);
                 })
                 .catch( error => console.log(`Error: ${error}`))
         }
 
-        defaultGreeting();
+        gamesList();
     }, []);
 
     return(
         <>
-            <div>{getGreeting}</div>
+            <div>{getGamesList}</div>
         </>
     );
 }
