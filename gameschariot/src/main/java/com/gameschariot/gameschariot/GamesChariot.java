@@ -1,20 +1,13 @@
 package com.gameschariot.gameschariot;
 
 public class GamesChariot {
+    private final String games;
 
-    private final long id;
-    private final String content;
-
-    public GamesChariot(long id, String content) {
-        this.id = id;
-        this.content = content;
-    }
-
-    public long getId() {
-        return id;
+    public GamesChariot(String allGames) {
+        this.games = allGames;
     }
 
     public String getContent() {
-        return content;
+        return games;
     }
 }
