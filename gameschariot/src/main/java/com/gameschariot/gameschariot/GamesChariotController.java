@@ -1,10 +1,7 @@
 package com.gameschariot.gameschariot;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicLong;
-
+import java.util.*;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -16,25 +13,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @CrossOrigin(origins = "*")
 public class GamesChariotController {
-
-    private static final String template = "Hello, %s!";
-    private final AtomicLong counter = new AtomicLong();
-
     @GetMapping("/")
     public GamesChariot gamesList() throws IOException {
         // scraper
         Document doc = Jsoup.connect("https://help.netflix.com/en/node/121442").get();
-        Elements listOfGames = doc.select(".c-wrapper div li a");
-        System.out.println(doc.select(".c-wrapper div li a"));
+        Elements listOfGames = doc.select(".tab:eq(1) li a");
 
-        List<String> gameTitles = new ArrayList<>();
+        HashMap<String, String> allGames = new LinkedHashMap<>();
         for(Element game : listOfGames) {
-            gameTitles.add(game.ownText());
+            allGames.put(game.text(), game.attr("abs:href"));
         }
-        // remove first 2 items and last item from list
-        gameTitles.remove(0);
-        gameTitles.remove(0);
-        gameTitles.remove(gameTitles.size()-1);
-        return new GamesChariot(counter.incrementAndGet(), gameTitles.toString());
+
+        return new GamesChariot(allGames.toString());
     }
 }

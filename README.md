@@ -1,6 +1,19 @@
 # GamesChariot
 Scraper built to a get list of games from the Netflix [website](https://help.netflix.com/en/node/121442).
 
+# Table of Contents
+
+- Purpose
+- Setup
+    * Running the Code
+    * Using the Website
+- Learnings
+    * Java Environment Variables 
+    * Spring Boot JSON Pretty Print
+    * Spring Boot Maven Plugin POM file Error
+    * ConcurrentModificationException
+    * JSoup CSS Selectors eq vs nth-child
+
 ## Purpose
 Here are some reasons I developed this project:
 
@@ -27,3 +40,8 @@ Here are some reasons I developed this project:
 **Requirements**
 * Internet Connection
 * Modern web browser
+
+You can use the website currently in one of two ways:
+
+1. You can visit [gameschariot.com](https://gameschariot.com) and see the current list of games offered by Netflix.
+2. You can visit [gameschariot.com/api](https://gameschariot.com/api) to see the environment variables you need to configure to run the application on your local machine.
