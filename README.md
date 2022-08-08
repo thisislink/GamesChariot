@@ -13,7 +13,7 @@ Scraper built to a get list of games from the Netflix [website](https://help.net
     * [Spring Boot Maven Plugin POM file Error](https://github.com/thisislink/GamesChariot#spring-boot-maven-plugin-pom-file-error)
     * [ConcurrentModificationException](https://github.com/thisislink/GamesChariot#concurrentmodificationexception)
     * [JSoup CSS Selectors eq vs nth-child](https://github.com/thisislink/GamesChariot#jsoup-css-selectors-eq-vs-nth-child)
-- Improvements
+- [Improvements](https://github.com/thisislink/GamesChariot#improvements)
 
 ## Purpose
 Here are some reasons I developed this project:
@@ -26,6 +26,8 @@ Here are some reasons I developed this project:
 * Most of my corporate professional coding experience is in .NET (VB and C#), so the only way to learn and practice Java is outside of work.
 * The Java class taught me the fundamentals of setting up a Tomcat server and using HTTP Servlets instead of using a framework. I wanted to learn how to use Spring Boot to make server setup easier and quicker.
 * The Issue Tracker project exposed secret credentials publically that I normally would not have wanted pushed to GitHub. There is a concept of env files and environment variables in C# and Node. I figured there had to be a similar concept in Java. So, I wanted to learn how to keep sensitive information secure in a Java application and off GitHub. 
+
+[Back To Top](https://github.com/thisislink/GamesChariot#table-of-contents)
 
 ## Setup
 
@@ -61,6 +63,8 @@ In the future, you will be able to use the website in one of two ways:
 1. By visiting [gameschariot.com](https://gameschariot.com) to see a current list of games offered by Netflix.
 2. By visiting [gameschariot.com/api](https://gameschariot.com/api) to see the environment variables you need to configure to run the application on your local machine.
 
+[Back To Top](https://github.com/thisislink/GamesChariot#table-of-contents)
+
 ## Learnings
 
 Below is a list of challenges and things I learned while building this project.
@@ -80,6 +84,8 @@ I chose to take advantage of Java .properties files to properly hide the databas
 
 The resource which really helped me learn how to setup the configuration is this [Store Secrets video](https://www.youtube.com/watch?v=PmGLn3ua_lU). 
 
+[Back To Top](https://github.com/thisislink/GamesChariot#table-of-contents)
+
 ### Spring Boot JSON Pretty Print
 
 This was more of a minor annoyance that I wanted to fix. The JSON object I created for the api route was displaying all of the keys and values on one line. 
@@ -92,6 +98,8 @@ I learned since I was using Spring Boot, by default it uses the Jackson JSON Obj
 spring.jackson.serialization.indent_output = true
 ```
 
+[Back To Top](https://github.com/thisislink/GamesChariot#table-of-contents)
+
 ### Spring Boot Maven Plugin POM file Error
 
 I created my Spring Boot application using the [Spring Initializr](start.spring.io), however, my pom.xml file had an error on the org.springframework.boot plugin. 
@@ -101,6 +109,8 @@ A quick Google search informed me the version tag was missing below the artifact
 ```
 <version>${project.parent.version}</version>
 ```
+
+[Back To Top](https://github.com/thisislink/GamesChariot#table-of-contents)
 
 ### ConcurrentModificationException
 
@@ -113,6 +123,8 @@ So, one solution to not have this error happen is to create a secondary collecti
 Then, depending on the data structure being used, you can use the proper built-in list, hashmap, array, etc. method to remove the items from the original collection after the iteration is done.
 
 I eventually figured out a better CSS selector, so I no longer needed to use the solution for this exception. 
+
+[Back To Top](https://github.com/thisislink/GamesChariot#table-of-contents)
 
 ### JSoup CSS Selectors eq vs nth-child
 
@@ -157,6 +169,8 @@ Ultimately, the correct CSS selector for the .tab class should have been .tab:eq
 .tab:eq(1) li a
 ```
 
+[Back To Top](https://github.com/thisislink/GamesChariot#table-of-contents)
+
 ## Improvements
 
 These are a list of things I think could be improved about the app:
@@ -165,3 +179,5 @@ These are a list of things I think could be improved about the app:
 - Correct the formatting of the games list on the backend, so it renders correctly on the frontend
 - Store game titles and game urls in database
 - Create the react component keys in a better way than calling Math.random()
+
+[Back To Top](https://github.com/thisislink/GamesChariot#table-of-contents)
