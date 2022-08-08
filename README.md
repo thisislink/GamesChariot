@@ -6,7 +6,7 @@ Scraper built to a get list of games from the Netflix [website](https://help.net
 - [Purpose](https://github.com/thisislink/GamesChariot#purpose)
 - [Setup](https://github.com/thisislink/GamesChariot#setup)
     * [Running the Code](https://github.com/thisislink/GamesChariot#running-the-code)
-    * [Using the Website](https://github.com/thisislink/GamesChariot#using-the-website)
+    * [Using the Website](https://github.com/thisislink/GamesChariot#using-the-website-future-state)
 - [Learnings](https://github.com/thisislink/GamesChariot#learnings)
     * [Java Environment Variables](https://github.com/thisislink/GamesChariot#java-environment-variables)
     * [Spring Boot JSON Pretty Print](https://github.com/thisislink/GamesChariot#spring-boot-json-pretty-print)
@@ -80,7 +80,7 @@ I did not want the same fate to happen to this project.
 
 So, other than taking other known precautions when setting up a server, such as firewall setup, I knew not disclosing usernames and passwords publically was going to be crucial.
 
-I chose to take advantage of Java .properties files to properly hide the database and server details I wanted to hide. With the use of a configuration controller, the keys that will need to be setup for anyone using the api can be accessed from the [/api](https://gameschariot.com/api) route. 
+I chose to take advantage of Java .properties files to properly hide the database and server details I wanted to hide. With the use of a configuration controller, the keys that will need to be setup for anyone using the api can be accessed from the [/api](https://gameschariot.com/api) route in a [future state](https://github.com/thisislink/GamesChariot#using-the-website-future-state). 
 
 The resource which really helped me learn how to setup the configuration is this [Store Secrets video](https://www.youtube.com/watch?v=PmGLn3ua_lU). 
 
