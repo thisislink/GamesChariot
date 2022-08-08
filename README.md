@@ -13,6 +13,7 @@ Scraper built to a get list of games from the Netflix [website](https://help.net
     * [Spring Boot Maven Plugin POM file Error](https://github.com/thisislink/GamesChariot#spring-boot-maven-plugin-pom-file-error)
     * [ConcurrentModificationException](https://github.com/thisislink/GamesChariot#concurrentmodificationexception)
     * [JSoup CSS Selectors eq vs nth-child](https://github.com/thisislink/GamesChariot#jsoup-css-selectors-eq-vs-nth-child)
+- Improvements
 
 ## Purpose
 Here are some reasons I developed this project:
@@ -35,16 +36,30 @@ Here are some reasons I developed this project:
 * Java Version 18.0.1.1
 * Node 18.7.0
 
-### Using the Website
+Pull down the code to your local machine or fork the branch and pull down the code to your local machine.
+
+Start the server for the backend. 
+
+If using Intellij, you can Run the GamesChariotApplication to start the server. 
+
+Then, click the Terminal tab and change directories to the frontend directory.
+
+Then type and enter 'run start' to start the frontend server.
+
+The backend server is located at localhost:8080 and the frontend server is located at localhost:3000.
+
+The api frontend is located at localhost:3000/api.
+
+### Using the Website (future state)
 
 **Requirements**
 * Internet Connection
 * Modern web browser
 
-You can use the website currently in one of two ways:
+In the future, you will be able to use the website in one of two ways:
 
-1. You can visit [gameschariot.com](https://gameschariot.com) and see the current list of games offered by Netflix.
-2. You can visit [gameschariot.com/api](https://gameschariot.com/api) to see the environment variables you need to configure to run the application on your local machine.
+1. By visiting [gameschariot.com](https://gameschariot.com) to see a current list of games offered by Netflix.
+2. By visiting [gameschariot.com/api](https://gameschariot.com/api) to see the environment variables you need to configure to run the application on your local machine.
 
 ## Learnings
 
@@ -141,3 +156,12 @@ Ultimately, the correct CSS selector for the .tab class should have been .tab:eq
 ```
 .tab:eq(1) li a
 ```
+
+## Improvements
+
+These are a list of things I think could be improved about the app:
+
+- Deploy app to custom domain, gameschariot.com
+- Correct the formatting of the games list on the backend, so it renders correctly on the frontend
+- Store game titles and game urls in database
+- Create the react component keys in a better way than calling Math.random()
