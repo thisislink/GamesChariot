@@ -1,7 +1,7 @@
 import axios from "axios";
 import {useState, useEffect } from "react";
 
-function Greeting() {
+function GamesChariot() {
     const [ getGamesList, setGamesList ] = useState([]);
 
     useEffect(() => {
@@ -11,6 +11,7 @@ function Greeting() {
             axios.get(url)
                 .then( response => {
                     setGamesList(response.data.content);
+                    console.log(response.data);
                 })
                 .catch( error => console.log(`Error: ${error}`))
         }
@@ -25,4 +26,4 @@ function Greeting() {
     );
 }
 
-export default Greeting;
+export default GamesChariot;
