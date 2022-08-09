@@ -1,6 +1,8 @@
 # GamesChariot
 Scraper built to a get list of games from the Netflix [website](https://help.netflix.com/en/node/121442).
 
+This is the repository for just the backend. 
+
 # Table of Contents
 
 - [Purpose](https://github.com/thisislink/GamesChariot#purpose)
