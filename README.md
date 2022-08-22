@@ -1,6 +1,10 @@
 # GamesChariot
 Scraper built to a get list of games from the Netflix [website](https://help.netflix.com/en/node/121442).
 
+Live demo here: [https://gameschariotapi.herokuapp.com/games](https://gameschariotapi.herokuapp.com/games)
+
+Recent code updates happen here: [https://github.com/thisislink/GamesChariotAPI](https://github.com/thisislink/GamesChariotAPI)
+
 # Table of Contents
 
 - [Purpose](https://github.com/thisislink/GamesChariot#purpose)
